@@ -193,7 +193,7 @@
 			mainblue\or%
  			mainblue\or%
 			mainblue\else%
-			maingray\fi%
+			mainblue\fi%
 		}%
 	}%
 	\stepcounter{colorCounter}%
