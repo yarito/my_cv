@@ -7,7 +7,7 @@
 %----------------------------------------------------------------------------------------
 
 \RequirePackage[sfdefault]{ClearSans}
-\RequirePackage[T1]{fontenc}
+\RequirePackage[Courier]{fontenc}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage[absolute,overlay]{textpos}
@@ -162,7 +162,6 @@
 		\skills
 		\skillstext
 		\scriptsize
-		% commented by yari (*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
 			
 		%------------------------------------------------
 			
@@ -220,7 +219,7 @@
 \setlength{\tabcolsep}{0pt}
 
 % New environment for the long list
-{%
+\newenvironment{twenty}{%
 	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
 }{%
 	\end{tabular*}
@@ -234,6 +233,29 @@
 		#4\vspace{\parsep}%
 	}\\
 }
+
+%----------------------------------------------------------------------------------------
+%	 CUSTOM ENVIRONMENT WITH 2 COLS
+%----------------------------------------------------------------------------------------
+
+\setlength{\tabcolsep}{0pt}
+
+% New environment for the long list
+\newenvironment{twentyb}{%
+	\begin{tabular*}{\textwidth}{ll}
+}{%
+	\end{tabular*}
+}
+
+\newcommand{\twentybitem}[3]{%
+	\parbox[t]{1\textwidth}{%
+		\textbf{#1}%
+		\hfill%
+		{\footnotesize#2}\\%
+		#3\vspace{\parsep}%
+	}\\
+}
+
 
 %----------------------------------------------------------------------------------------
 %	 SMALL LIST ENVIRONMENT
